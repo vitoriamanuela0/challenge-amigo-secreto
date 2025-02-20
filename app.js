@@ -19,3 +19,12 @@ function atualizarLista() {
         lista.appendChild(li);
     });
 }
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        document.getElementById('resultado').innerHTML = "Não há amigos na lista para sortear.";
+        return;
+    }
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSorteado = amigos[indiceAleatorio];
+    document.getElementById('resultado').innerHTML = `O amigo sorteado é: ${amigoSorteado}`;
+}
